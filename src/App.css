@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+--Moderate-cyan: hsl(176, 50%, 47%);
+--Dark-cyan: hsl(176, 72%, 28%);
+--Black: hsl(0, 0%, 0%);
+--Dark-gray: hsl(0, 0%, 48%);
+}
+
+*,
+*::before,
+*::after{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+/* *:focus{
+  outline: none;
+} */
+
+body{
+  background-color: hsl(0, 0%, 48%, 0.05);
+  font-size:16px;
+  font-family:'Commissioner',Arial, Helvetica, sans-serif;
+  /* text-align: center; */
+}
+
+ul{
+  list-style: none;
+}
+nav a{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+}
+
+p{
+  font-size:.9rem;
+  color: var(--Dark-gray);
+  line-height:1.5rem;
+  font-weight: 400;
+}
+header{
+  position: relative;
+}
+
+header .desktop-hero{
+  display: none;
+}
+header .mobile-hero{
+  max-width:100%;
+  position: absolute;
+  left: 0;
+  z-index:-1;
+
+}
+
+.container, .pledge{
+  margin: 0 auto;
+  max-width:800px;
+  padding:1em 1.5em;
+}
+header .container{
+  padding:2em 1.5em;
+  padding-bottom:10.5rem; 
+  max-width:100%;
+}
+
+header .head-content{
+  display:flex;
+  justify-content: space-between;
+}
+
+header .navigations{
+  display: none;
+}
+
+
+.white-container{
+  position: relative;
+  background-color: white;
+  border: 1px solid hsl(0, 0%, 48%, 0.1);
+  border-radius:1rem;
+  text-align: center;
+}
+
+.headline .mastercraft{
+  position: absolute;
+  left:calc(50% - 2rem);
+  margin-top:calc(-1.75rem);
+}
+
+.headline .content{
+  margin:1rem;
+  text-align: center;
+}
+
+.headline .content h1{
+  margin:1rem;
+  padding-top:1.5em;
+  font-size:1.5rem;
+  font-weight: 700;
+}
+
+.headline .control{
+  padding: .5rem 1.5rem 2.5rem 1rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-content: space-between;
+}
+
+.mobile-nav{
+  position: relative;
+}
+
+button{
+  height: 56px;
+  border-radius: 2rem;
+  border-width: 0;
+  background-color: var(--Moderate-cyan);
+  color:white;
+  font-weight: 700;
+  cursor: pointer;
+
+}
+
+.lg{
+  width:210px;
+}
+
+.md{
+  width:12em;
+}
+
+.sm{
+  height:40px;
+  width:5rem;
+  font-size: .8em;
+}
+
+.headline .control p{
+  display: none;
+}
+
+.headline .control div:nth-child(1){
+  justify-self: start;
+}
+
+.headline .control div:nth-child(2){
+  justify-self: end;
+}
+
+.progress-container{
+  padding:2rem;
+}
+
+.progress-container h2{
+  font-size: 2rem;
+}
+
+.progress-container div:nth-child(1) div:nth-child(2){
+  padding:3rem;
+} 
+
+
+.progress-container div:nth-child(1) div:nth-child(2)::after{
+
+  content: " ";
+  width: 5rem;
+  height:1px;
+  background-color:hsl(0, 0%, 48%, 0.3);
+  display: block;
+  position: absolute;
+  left:calc(50% - 2.5rem);
+  margin:1rem 0;
+  
+}
+
+.progress-container div:nth-child(1) div:nth-child(2)::before{
+
+  content: " ";
+  width: 5rem;
+  height:1px;
+  background-color:hsl(0, 0%, 48%, 0.3);
+  display: block;
+  position: absolute;
+  top: 25%;
+  left:calc(50% - 2.5rem);
+  margin:1rem 0;
+
+}
+progress{
+  margin-top:2rem;
+  width:100%;
+  border-radius:2rem;
+  height:.9rem;
+  border-width:0;
+}
+progress::-moz-progress-bar,
+progress::-webkit-progress-bar {
+  background-color: var(--Moderate-cyan);
+  width:100%;
+  border-radius:2rem;
+  height:.8rem;
+}
+
+.about .white-container {
+  text-align: unset;
+}
+/* 
+.about .white-container > div:nth-child(1),
+.about .white-container > div:nth-child(2){
+  padding: 1rem 1.5rem;
+} */
+
+.about .text-content{
+  padding: 1rem 1.5rem;
+}
+
+.text-content h2{
+  font-size:1.125rem;
+  padding-top:1.5rem;
+}
+
+.text-content p{
+  margin:1.5rem 0 0;
+}
+
+.pledge{
+  border: 1px solid hsl(0, 0%, 48%, 0.4);
+}
+
+.pledge > div:nth-child(1) p{
+  color: var(--Moderate-cyan);
+  font-weight: 400;
+}
+
+.pledge > div:nth-child(1) h2{
+  font-size:.9rem;
+  padding-bottom:.4rem;
+}
+
+.pledge > div:nth-child(2){
+  padding:1.5rem 0;
+}
+
+.pledge > div:nth-child(3) > div:first-child{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.pledge > div:nth-child(3) > div:first-child h6{
+  font-size:2rem;
+  padding-right:.6rem;
+}
+
+#modal{
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#modal .white-container{
+    text-align: left;
+  }
+
+
+@media (min-width:750px) {
+  header .navigations{
+    display: block;
+  }
+
+  header .container{
+    max-width:80%;
+  }
+
+  .navigations li {
+    display: inline-block;
+    margin-right:2em;
+  }
+
+  .navigations a{
+    color: white;
+    font-size:.9rem;
+  }
+  header .container div:nth-child(3){
+    display: none;
+  }
+
+  header .mobile-hero{
+    display: none;
+  }
+
+  header .desktop-hero{
+  display:block;
+  width:100%;
+  position: absolute;
+  left: 0;
+  z-index:-1;
+  }
+
+  .progress-container > div:nth-child(1){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    align-items: end;
+    justify-items: start;
+  }
+
+  .progress-container > div:nth-child(1) div::after{
+    display: none;
+  }
+
+  .progress-container > div:nth-child(1) div:nth-child(2){
+    /* justify-self: center; */
+    padding: 0;
+  }
+
+.progress-container div:nth-child(1) div:nth-child(2)::after{
+  transform: rotate(90deg); 
+  top:25%; 
+  left: 55%;
+  width:3.5rem;
+}
+
+.progress-container div:nth-child(1) div:nth-child(2)::before{
+  transform: rotate(90deg); 
+  left:calc(25%); 
+  width: 3.5rem;
+}
+
+.headline .control p{
+  display: inline-block;
+  color: black;
+}
+
+.headline .control div:nth-child(2){
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  background-color: hsl(0, 0%, 48%,0.1);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+
+.pledge > div:nth-child(3),
+.pledge > div:nth-child(1){
+  display: grid;
+  align-items: center;
+  grid-template-columns:1fr 1fr;
+  
+}
+.pledge > div:nth-child(3) > div:nth-child(1){
+  margin-bottom: 0;
+}
+
+.pledge > div:nth-child(3) > div:nth-child(2),
+.pledge > div:nth-child(1) > div:nth-child(2){
+  justify-self: end;
+}
+
+header .container{
+  /* padding:2em 1.5em; */
+  padding-bottom:9rem; 
+  /* max-width:80%; */
+}
+
+#modal{
+  top: 25%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#modal .back-project{
+  max-width: 800px;
+}
+
+  
+  
+}
