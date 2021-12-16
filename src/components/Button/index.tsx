@@ -8,7 +8,7 @@ interface Prop{
 }
 
 const Button:FC<Prop> =(prop)=>{
-    const {classname,content,color} = prop
+    const {classname,content} = prop
     return(
         <div>
             <button className={classname}>
